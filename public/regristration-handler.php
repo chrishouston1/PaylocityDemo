@@ -1,9 +1,9 @@
 <?php
 session_start();
-//require("Dao.php");
+require("Dao.php");
 
 // Create database handle
-//$dao = new DAO();
+$dao = new DAO();
 
 $company_name = $_POST['companyName'];
 $email = $_POST['email'];
@@ -40,7 +40,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 // If everything is valid and no errors, then try to register the company
 if (empty($errors)) {
-    print("good");
+    if($dao->addCompany($company_name, $email, $password)){
+        $_SESSION['company_name'] = $company_name;
+        $_SESSION['logged_in'] = true;
+        header('Location: employees.php');
+    }
 } else {
     
     // Set new session errors for current regrister attempt

@@ -25,4 +25,29 @@ class Dao
         $conn = $this->getConnection();
         return $conn->getAttribute(constant("PDO::ATTR_CONNECTION_STATUS"));
     }
+    
+    
+    /* Adds a new company into the database */
+    public function addCompany($company_name, $email, $password){
+        $conn = $this->getConnection();
+        // Hash password
+        $digest = password_hash($password, PASSWORD_DEFAULT);
+        if(!$digest){
+            throw new Exception("Could not hash password!");
+        }
+        
+        $query = "INSERT INTO company VALUES ('', :company_name, :email, :password)";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':company_name', $company_name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $digest);
+        
+        // Return if the account was created or not
+        try {
+            $stmt->execute();
+            return true;
+        } catch(PDOException $e) {
+            return false;
+        }
+    }
 }
