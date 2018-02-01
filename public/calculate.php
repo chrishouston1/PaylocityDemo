@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="css/style.css" type="text/css" rel="stylesheet">
-        <title>Paylocity Demo - Home</title>
+        <title>Paylocity Demo - Calculate</title>
     </head>
 
     
