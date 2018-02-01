@@ -46,7 +46,7 @@
 
 
 <div class="footer">
-    <p>Coding challenge by Chris Houston for Paylocity</p>
+    <p>Chris Houston</p>
 </div>
 
 
