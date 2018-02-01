@@ -1,3 +1,11 @@
+
+<?php
+    if(session_status() === PHP_SESSION_NONE){
+        session_start();
+    }
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -15,6 +23,8 @@
         <li><a href="index.php">Home</a></li>
         <li><a href="employees.php">Employees</a></li>
         <li><a href="calculate.php">Calculate</a></li>
+        <li><a href="login.php">Sign In</a></li>
+        <li><a href="register.php">Register</a></li>
     </ul>
 </div>
 

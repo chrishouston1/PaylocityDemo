@@ -1,3 +1,10 @@
+<?php
+    if(session_status() === PHP_SESSION_NONE){
+        session_start();
+    }
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -13,8 +20,8 @@
     <a href="index.php"><img class="logo" src="images/paylocity_logo.png" alt="Paylocity Coding Challenge Logo" title="Paylocity Home" /></a>
     <ul class="navlinks">
         <li><a href="index.php">Home</a></li>
-        <li><a href="employees.php">Employees</a></li>
-        <li><a href="calculate.php">Calculate</a></li>
+        <li><a href="login.php">Sign In</a></li>
+        <li><a href="register.php">Register</a></li>
     </ul>
 </div>
 
@@ -24,7 +31,7 @@
         <h1 class="orange-title">Sign In</h1>
         <div class="signInForm">
             <form class="signIn" action="login-handler.php" method="POST">
-                <span>Email address:</span><br />
+                <span>Email:</span><br />
                 <input type="text" name="email" required> <br />
                 <span>Password:</span><br />
                 <input type="text" name="password" required> <br />

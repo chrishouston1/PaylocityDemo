@@ -1,7 +1,7 @@
 /* Reset all margins and paddings */
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0em;
+    margin: 0em;
     
 }
 
@@ -14,23 +14,23 @@
     display: block; 
     margin-left: auto;
     margin-right: auto; 
-    padding: 10px;
+    padding: 0.625em;
 }
 
 .navlinks {
-    margin-left: 30px;
-    padding-top: 20px;
+    margin-left: 1.875em;
+    padding-top: 1.25em;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 0.625em;
     font-family: "Helvetica";
     color: gray;
-    font-size: 18px; 
+    font-size: 1.125em; 
     color: black;
 }
 
 .header .navlinks li {
     display: inline;
-    padding: 15px;
+    padding: 0.9em;
 }
 
 .navlinks li :visited, .navlinks li :link {
@@ -39,10 +39,10 @@
 }
 
 .navlinks li :hover {
-    color: #E79100;
+    color: #fcaa1e;
     text-decoration: none;
-    padding-bottom: 3px;
-    border-bottom: 2px solid #E79100;
+    padding-bottom: 0.188em;
+    border-bottom: 0.125em solid #919191;
     transition: border-width 0.3s linear;
     -webkit-transition: border-width 0.3s linear;   
     -moz-transition:    border-width 0.3s linear; 
@@ -52,64 +52,64 @@
 
 /* Body */
 .main {
-    padding-bottom: 20px;
+    padding-bottom: 1.25em;
 }
 
 .container {
     width: 50%;
-    min-width: 300px;
-    min-height: 800px;
+    min-width: 18.75em;
+    min-height: 50em;
     height: auto;
     margin-left: 25%;
-    border: 1px solid #d0c8c8;
+    border: 0.063em solid #d0c8c8;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px gray;
+    border-radius: 0.625em;
+    box-shadow: 0.3em 0.3em 0.625em gray;
 }
 
 .center-image {
     display: block; 
     margin-left: auto;
     margin-right: auto; 
-    padding-top: 20px;
+    padding-top: 1.25em;
 }
 
 .orange-title {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 1.25em;
     font-family: "Helvetica";
     font-weight: 300;
     color: gray;
-    font-size: 40px; 
-    color: #E79100;
+    font-size: 2.5em; 
+    color: #fcaa1e;
 }
 
 .coding-challenge-content {
     padding: 5%;
     font-family: "Helvetica";
     color: black;
-    font-size: 16px; 
+    font-size: 1em; 
 }
 
 .coding-challenge-content p {
-    padding: 20px 0px;
+    padding: 0.625em 0em;
 }
 
 .coding-challenge-content ul {
-    padding-left: 40px;
+    padding-left: 2.5em;
 }
 
 .coding-challenge-content h4 {
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding-top: 0.625em;
+    padding-bottom: 0.3em;
 }
 
 .coding-challenge-content h3 {
     text-align: center;
     font-weight: 400;
-    font-size: 30px;
-    color: #B41912;
-    padding-top: 40px;
+    font-size: 1.875em;
+    color: #c6261d;
+    padding-top: 2.5em;
 }
 
 
@@ -117,18 +117,18 @@
 .registerForm {
     font-family: "Helvetica";
     font-weight: 500;
-    margin-left: 50px;
-    padding-top: 60px;
+    margin-left: 3.125em;
+    padding-top: 3.75em;
 }
 
 .register input {
     width: 80%;
-    height: 40px;
-    margin: 20px;
-    padding-left: 15px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    font-size: 20px;
+    height: 2.5em;
+    margin: 1em 5%;
+    padding-left: .5em;
+    border: .063em solid lightgray;
+    border-radius: 0.313em;
+    font-size: 1.25em;
     
 }
 
@@ -139,30 +139,36 @@
 
 .register input[type=submit]:focus {
     outline: none;
-    background-color: #c27b00;
+    background-color: #fcaa1e;
 }
 
 .register input[type=submit] {
-    background-color: #E79100;
+    background-color: #fcaa1e;
     font-weight: 500;
 }
+
+.register input[type=submit]:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
+}
+
 
 /* Sign In Page */
 .signInForm {
     font-family: "Helvetica";
     font-weight: 500;
-    margin-left: 50px;
-    padding-top: 60px;
+    margin-left: 3.125em;
+    padding-top: 3.75em;
 }
 
 .signIn input {
     width: 80%;
-    height: 40px;
-    margin: 20px;
-    padding-left: 15px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    font-size: 20px;
+    height: 2.5em;
+    margin: 1em 5%;
+    padding-left: .5em;
+    border: .063em solid lightgray;
+    border-radius: 0.313em;
+    font-size: 1.25em;
     
 }
 
@@ -173,25 +179,40 @@
 
 .signIn input[type=submit]:focus {
     outline: none;
-    background-color: #c27b00;
+    background-color: #fcaa1e;
 }
 
 .signIn input[type=submit] {
-    background-color: #E79100;
+    background-color: #fcaa1e;
     font-weight: 500;
 }
 
-.button-center {
-    align-content: center;
-    width: 200px;
+.signIn input[type=submit]:hover {
+    background-color: #d8d8d8;
+    cursor: pointer;
 }
+
+
+/* Extra */
+.button-center {
+    width: 50%;
+    margin-left: 25%;
+    padding: 0em;
+}
+
+.error-message {
+    color: red;
+    padding-left: .5em;
+}
+
+
 /* Footer */
 
 .footer {
-    height: 50px;
-    padding-top: 20px;
+    height: 3.125em;
+    padding-top: 1.25em;
     text-align: center;
     font-family: "Helvetica";
     color: gray;
-    font-size: 12px;
+    font-size: 1em;
 }
