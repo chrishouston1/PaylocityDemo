@@ -28,7 +28,7 @@ class Dao
     
     
     /* Adds a new company into the database */
-    public function addCompany($company_name, $email, $password){
+    public function addCompany($email, $password){
         $conn = $this->getConnection();
         // Hash password
         $digest = password_hash($password, PASSWORD_DEFAULT);
@@ -49,5 +49,22 @@ class Dao
         } catch(PDOException $e) {
             return false;
         }
+    }
+    
+    /* Validate the user's email and password. Then return an array of company info */
+    public function validateUser($email, $password){
+        $conn = $this->getConnection();
+        $stmt = $conn->prepare("SELECT company_name, company_email, password FROM company WHERE company_email = :email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        $user = $stmt->fetch();
+        $digest = $user['password'];
+        $isValid = password_verify($password, $digest);
+        
+        // If password is correct, return a user array
+        if($isValid == TRUE){
+            return array('company_name' => $user['company_name']);
+        }
+ 
     }
 }

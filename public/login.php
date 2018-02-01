@@ -29,12 +29,24 @@
 <div class="main">
     <div class="container">
         <h1 class="orange-title">Sign In</h1>
+        
+        <!-- Sign In Form -->
         <div class="formContainer">
             <form class="form" action="login-handler.php" method="POST">
-                <span>Email:</span><br />
-                <input type="text" name="email" required> <br />
+                
+                <!-- Email -->
+                <span>Email:</span>
+                <?php if(isset($_SESSION['errors']['loginError'])) { ?>
+                    <span class="error-message"><?= $_SESSION['errors']['loginError'] ?></span>
+                <?php } ?>
+                <br />
+                <input type="text" name="login_email" value="<?= $_SESSION['presets']['login_email'] ?>"> <br />
+                
+                <!-- Password -->
                 <span>Password:</span><br />
-                <input type="text" name="password" required> <br />
+                <input type="password" name="password" > <br />
+                
+                <!-- Submit -->
                 <div class="button-center">
                     <input class="button-center" type="submit" value="Sign in">
                 </div>
