@@ -18,6 +18,7 @@
 
 .navlinks {
     margin-left: 30px;
+    padding-top: 20px;
     text-align: center;
     padding-bottom: 10px;
     font-family: "Helvetica";
@@ -56,7 +57,7 @@
 .container {
     width: 50%;
     min-width: 300px;
-    min-height: 800px;
+    height: 800px;
     margin-left: 25%;
     border: 1px solid #d0c8c8;
     background-color: white;
@@ -68,12 +69,12 @@
     display: block; 
     margin-left: auto;
     margin-right: auto; 
-    padding: 10px;
+    padding-top: 20px;
 }
 
-.coding-challenge-title {
+.orange-title {
     text-align: center;
-    padding: 10px;
+    padding-top: 40px;
     font-family: "Helvetica";
     font-weight: 300;
     color: gray;
@@ -108,6 +109,81 @@
     color: #B41912;
     padding-top: 40px;
 }
+
+
+/* Register Page */
+.registerForm {
+    font-family: "Helvetica";
+    font-weight: 500;
+    margin-left: 50px;
+    padding-top: 60px;
+}
+
+.register input {
+    width: 80%;
+    height: 40px;
+    margin: 20px;
+    padding-left: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 20px;
+    
+}
+
+.register input[type=text],
+.register input[type=text]:focus {
+    outline: none;
+}
+
+.register input[type=submit]:focus {
+    outline: none;
+    background-color: #c27b00;
+}
+
+.register input[type=submit] {
+    background-color: #E79100;
+    font-weight: 500;
+}
+
+/* Sign In Page */
+.signInForm {
+    font-family: "Helvetica";
+    font-weight: 500;
+    margin-left: 50px;
+    padding-top: 60px;
+}
+
+.signIn input {
+    width: 80%;
+    height: 40px;
+    margin: 20px;
+    padding-left: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 20px;
+    
+}
+
+.signIn input[type=text],
+.signIn input[type=text]:focus {
+    outline: none;
+}
+
+.signIn input[type=submit]:focus {
+    outline: none;
+    background-color: #c27b00;
+}
+
+.signIn input[type=submit] {
+    background-color: #E79100;
+    font-weight: 500;
+}
+
+.button-center {
+    align-content: center;
+    width: 200px;
+}
+/* Footer */
 
 .footer {
     height: 50px;

@@ -22,7 +22,7 @@
 <div class="main">
     <div class="container">
         <img class="center-image" src="images/coding_challenge.png">
-        <h1 class="coding-challenge-title">Paylocity Coding Challenge</h1>
+        <h1 class="orange-title">Paylocity Coding Challenge</h1>
         <div class="coding-challenge-content">
             <p>This website was created as a web application coding challenge for Paylocity. This application will demonstrate the calculation a company makes for paying for their employees' benefits package.
             </p>
