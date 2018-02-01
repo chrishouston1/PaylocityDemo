@@ -1,5 +1,8 @@
 # Paylocity Demo
 
-#### Live demo: https://dashboard.heroku.com/apps/paylocitydemo
+#### Live demo: https://paylocitydemo.herokuapp.com/employees.php
+
+****
+This project is a coding challenge for Paylocity.
 
 
