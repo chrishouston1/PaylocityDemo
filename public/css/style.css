@@ -17,6 +17,7 @@
 }
 
 .navlinks {
+    margin-left: 30px;
     text-align: center;
     padding-bottom: 10px;
     font-family: "Helvetica";
@@ -28,7 +29,6 @@
 .header .navlinks li {
     display: inline;
     padding: 15px;
-
 }
 
 .navlinks li :visited, .navlinks li :link {
@@ -56,12 +56,57 @@
 .container {
     width: 50%;
     min-width: 300px;
-    height: 800px;
+    min-height: 800px;
     margin-left: 25%;
     border: 1px solid #d0c8c8;
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
+}
+
+.center-image {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 10px;
+}
+
+.coding-challenge-title {
+    text-align: center;
+    padding: 10px;
+    font-family: "Helvetica";
+    font-weight: 300;
+    color: gray;
+    font-size: 40px; 
+    color: #E79100;
+}
+
+.coding-challenge-content {
+    padding: 5%;
+    font-family: "Helvetica";
+    color: black;
+    font-size: 16px; 
+}
+
+.coding-challenge-content p {
+    padding: 20px 0px;
+}
+
+.coding-challenge-content ul {
+    padding-left: 40px;
+}
+
+.coding-challenge-content h4 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.coding-challenge-content h3 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    color: #B41912;
+    padding-top: 40px;
 }
 
 .footer {
