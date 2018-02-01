@@ -132,9 +132,9 @@
     
 }
 
-.register input[type=text],
-.register input[type=text]:focus {
+.register input:focus {
     outline: none;
+    background-color: #fcfcfc
 }
 
 .register input[type=submit]:focus {
@@ -172,9 +172,9 @@
     
 }
 
-.signIn input[type=text],
 .signIn input[type=text]:focus {
     outline: none;
+    background-color: #fcfcfc
 }
 
 .signIn input[type=submit]:focus {
