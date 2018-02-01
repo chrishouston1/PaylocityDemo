@@ -114,14 +114,14 @@
 
 
 /* Register Page */
-.registerForm {
+.formContainer {
     font-family: "Helvetica";
     font-weight: 500;
     margin-left: 3.125em;
     padding-top: 3.75em;
 }
 
-.register input {
+.form input {
     width: 80%;
     height: 2.5em;
     margin: 1em 5%;
@@ -132,62 +132,22 @@
     
 }
 
-.register input:focus {
+.form input:focus {
     outline: none;
     background-color: #fcfcfc
 }
 
-.register input[type=submit]:focus {
+.form input[type=submit]:focus {
     outline: none;
     background-color: #fcaa1e;
 }
 
-.register input[type=submit] {
+.form input[type=submit] {
     background-color: #fcaa1e;
     font-weight: 500;
 }
 
-.register input[type=submit]:hover {
-    background-color: #d8d8d8;
-    cursor: pointer;
-}
-
-
-/* Sign In Page */
-.signInForm {
-    font-family: "Helvetica";
-    font-weight: 500;
-    margin-left: 3.125em;
-    padding-top: 3.75em;
-}
-
-.signIn input {
-    width: 80%;
-    height: 2.5em;
-    margin: 1em 5%;
-    padding-left: .5em;
-    border: .063em solid lightgray;
-    border-radius: 0.313em;
-    font-size: 1.25em;
-    
-}
-
-.signIn input[type=text]:focus {
-    outline: none;
-    background-color: #fcfcfc
-}
-
-.signIn input[type=submit]:focus {
-    outline: none;
-    background-color: #fcaa1e;
-}
-
-.signIn input[type=submit] {
-    background-color: #fcaa1e;
-    font-weight: 500;
-}
-
-.signIn input[type=submit]:hover {
+.form input[type=submit]:hover {
     background-color: #d8d8d8;
     cursor: pointer;
 }

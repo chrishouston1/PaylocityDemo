@@ -29,8 +29,8 @@
 <div class="main">
     <div class="container">
         <h1 class="orange-title">Sign In</h1>
-        <div class="signInForm">
-            <form class="signIn" action="login-handler.php" method="POST">
+        <div class="formContainer">
+            <form class="form" action="login-handler.php" method="POST">
                 <span>Email:</span><br />
                 <input type="text" name="email" required> <br />
                 <span>Password:</span><br />

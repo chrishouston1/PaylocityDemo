@@ -31,8 +31,8 @@
         <h1 class="orange-title">Register your company now!</h1>
         
         <!-- Register Form -->
-        <div class="registerForm">
-            <form class="register" action="regristration-handler.php" method="POST">
+        <div class="formContainer">
+            <form class="form" action="regristration-handler.php" method="POST">
                 
                 <!-- Company Name -->
                 <span>Company name:</span>
