@@ -30,6 +30,8 @@ if(empty($errors)){
             $_SESSION['logged_in'] = true;
             session_regenerate_id(true);
             $_SESSION['company_name'] = $company['company_name'];
+            $_SESSION['company_id'] = $company['company_id'];
+
             header('Location: employees.php');
             
         }else{

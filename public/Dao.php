@@ -54,7 +54,7 @@ class Dao
     /* Validate the user's email and password. Then return an array of company info */
     public function validateUser($email, $password){
         $conn = $this->getConnection();
-        $stmt = $conn->prepare("SELECT company_name, company_email, password FROM company WHERE company_email = :email");
+        $stmt = $conn->prepare("SELECT id, company_name, company_email, password FROM company WHERE company_email = :email");
         $stmt->bindParam(':email', $email);
         $stmt->execute();
         $user = $stmt->fetch();
@@ -63,8 +63,19 @@ class Dao
         
         // If password is correct, return a user array
         if($isValid == TRUE){
-            return array('company_name' => $user['company_name']);
+            return array('company_name' => $user['company_name'], 'company_id' => $user['id']);
         }
- 
     }
+    
+    
+    /* Adds new employee to the company */
+    public function addEmployee($first_name, $last_name, $company_id){
+        $conn = $this->getConnection();
+        $stmt = $conn->prepare("INSERT INTO employee VALUES ('', :first_name, :last_name, :company_id)");
+        $stmt->bindParam(':first_name', $first_name);
+        $stmt->bindParam(':last_name', $last_name);
+        $stmt->bindParam(':company_id', $company_id);
+        $stmt->execute(); 
+    }
+    
 }
