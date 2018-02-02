@@ -32,9 +32,20 @@ for($i = 1; $i <= $num_dependents; $i++) {
 }
 
 
-
+// Add dependents to database
 if(empty($errors)) {
-    print("good");
+    
+    for($i = 1; $i <= $num_dependents; $i++) {
+        $first_name = 'dependent_first_name_' . $i;
+        $last_name = 'dependent_last_name_' . $i;
+
+        $first_name_value = $_POST[$first_name];
+        $last_name_value = $_POST[$last_name];
+        
+        $dao->addDependent($first_name_value, $last_name_value, $_SESSION['employee_id']);
+        header('Location: employees.php');
+    }
+    
 } else {
     $_SESSION['errors'] = $errors;
     header('Location: ' . $_SERVER['HTTP_REFERER']);

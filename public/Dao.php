@@ -75,6 +75,28 @@ class Dao
         $stmt->bindParam(':first_name', $first_name);
         $stmt->bindParam(':last_name', $last_name);
         $stmt->bindParam(':company_id', $company_id);
+        $stmt->execute();
+    }
+    
+    /* Return the ID for the employee */
+    public function getEmployeeID($first_name, $last_name, $company){
+        $conn = $this->getConnection();
+        $stmt = $conn->prepare("SELECT id FROM employee WHERE first_name = :first_name AND last_name = :last_name AND company = :company");
+        $stmt->bindParam(':first_name', $first_name);
+        $stmt->bindParam(':last_name', $last_name);
+        $stmt->bindParam(':company', $company);
+        $stmt->execute();
+        $results = $stmt->fetch();
+        return array('employee_id' => $results['id']);
+    }
+    
+        /* Adds new dependent */
+    public function addDependent($first_name, $last_name, $employee){
+        $conn = $this->getConnection();
+        $stmt = $conn->prepare("INSERT INTO dependent VALUES ('', :first_name, :last_name, :employee)");
+        $stmt->bindParam(':first_name', $first_name);
+        $stmt->bindParam(':last_name', $last_name);
+        $stmt->bindParam(':employee', $employee);
         $stmt->execute(); 
     }
     

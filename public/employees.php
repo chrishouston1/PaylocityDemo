@@ -2,6 +2,9 @@
     if(session_status() === PHP_SESSION_NONE){
         session_start();
     }
+
+    // Unset the presets 
+    unset($_SESSION['presets']);
 ?>
 
 

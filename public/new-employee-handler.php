@@ -28,14 +28,17 @@ if($num_dependents < 0 || $num_dependents >= 10) {
 // If no errors, go to the next page of the form
 if(empty($errors)){
     
-    // Add employee if there are no dependents
-    if ($num_dependents == 0) {
-        $dao->addEmployee($first_name, $last_name, $_SESSION['company_id']);
-        header('Location: employees.php');
-    } else {
+    $dao->addEmployee($first_name, $last_name, $_SESSION['company_id']);
+        $employee_ID = $dao->getEmployeeID($first_name, $last_name, $_SESSION['company_id']);
+        $_SESSION['employee_id'] = $employee_ID['employee_id'];
         $_SESSION['employee_first_name'] = $first_name;
         $_SESSION['employee_last_name'] = $last_name;
         $_SESSION['employee_num_dependents'] = $num_dependents;
+    
+    // Add employee if there are no dependents
+    if ($num_dependents == 0) {
+        header('Location: employees.php');
+    } else {
         header('Location: new-dependents.php');
     }
 } else {

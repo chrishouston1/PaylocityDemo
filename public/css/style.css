@@ -18,13 +18,12 @@ body {
 }
 
 .navlinks {
-    margin-left: 1.875em;
     padding-top: 1.25em;
     text-align: center;
     padding-bottom: 0.625em;
     font-family: "Helvetica";
     color: gray;
-    font-size: 1.125em; 
+    font-size: 1.3em; 
     color: black;
 }
 
