@@ -28,7 +28,7 @@ class Dao
     
     
     /* Adds a new company into the database */
-    public function addCompany($email, $password){
+    public function addCompany($company_name, $email, $password){
         $conn = $this->getConnection();
         // Hash password
         $digest = password_hash($password, PASSWORD_DEFAULT);

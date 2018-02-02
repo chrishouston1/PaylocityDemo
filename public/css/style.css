@@ -5,8 +5,8 @@
     
 }
 
-.header, .main, .footer {
-    background-color: #ece9e9;
+body {
+    background-color: #f7f6f4;
 }
 
 /* Header */
@@ -58,7 +58,7 @@
 .container {
     width: 50%;
     min-width: 18.75em;
-    min-height: 50em;
+    min-height: 35em;
     height: auto;
     margin-left: 25%;
     border: 0.063em solid #d0c8c8;
@@ -121,7 +121,7 @@
     padding-top: 3.75em;
 }
 
-.form input {
+.form input, .form input {
     width: 80%;
     height: 2.5em;
     margin: 1em 5%;
@@ -129,6 +129,7 @@
     border: .063em solid lightgray;
     border-radius: 0.313em;
     font-size: 1.25em;
+    background-color: #fefefe;
     
 }
 
@@ -145,6 +146,7 @@
 .form input[type=submit] {
     background-color: #fcaa1e;
     font-weight: 500;
+    margin-bottom: 3em;
 }
 
 .form input[type=submit]:hover {

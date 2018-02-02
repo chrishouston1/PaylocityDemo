@@ -10,14 +10,14 @@ $password = $_POST['password'];
 $errors = array();
 
 // Check the lengths of all variables and valid email
-if(strlen($email) <= 0 || strlen($email) > 50) {
-    $errors['loginError'] = "Email address must be less than 50 characters!";
-} else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    $errors['loginError'] = "Enter a valid email address.";
-}
 if(strlen($password) <= 0 || strlen($password) >= 60) {
     $errors['loginError'] = "You must enter in a password!";
 } 
+
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    $errors['loginError'] = "Enter a valid email address.";
+}
+
 
 // If all valid, redirect the user to the welcome page, else redirect back to the form page
 if(empty($errors)){
@@ -35,7 +35,7 @@ if(empty($errors)){
         }else{
             $errors['loginError'] = "Invalid username or password.";
             $_SESSION['errors'] = $errors;
-            $_SESSION['presets'] = array('login_email' => htmlspecialchars($email),
+            $_SESSION['presets'] = array('email' => htmlspecialchars($email),
                                          'password' => htmlspecialchars($password));
             header('Location: ' . $_SERVER['HTTP_REFERER']);
         }
