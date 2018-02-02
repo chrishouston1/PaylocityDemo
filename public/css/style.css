@@ -82,6 +82,9 @@ body {
     color: gray;
     font-size: 2.5em; 
     color: #fcaa1e;
+    border-bottom: 0.03em solid lightgray;
+    padding-bottom: 0.25em;
+    margin: 0em 4em;
 }
 
 .coding-challenge-content {
@@ -144,13 +147,14 @@ body {
 }
 
 .form input[type=submit] {
-    background-color: #fcaa1e;
+    background-color: #efede8;
     font-weight: 500;
     margin-bottom: 3em;
+    -webkit-appearance: none;
 }
 
 .form input[type=submit]:hover {
-    background-color: #d8d8d8;
+    background-color: #fcaa1e;
     cursor: pointer;
 }
 

@@ -29,13 +29,13 @@ if(empty($errors)){
         if($company){
             $_SESSION['logged_in'] = true;
             session_regenerate_id(true);
-            $_SESSION['company_name'] = $user['company_name'];
+            $_SESSION['company_name'] = $company['company_name'];
             header('Location: employees.php');
             
         }else{
             $errors['loginError'] = "Invalid username or password.";
             $_SESSION['errors'] = $errors;
-            $_SESSION['presets'] = array('email' => htmlspecialchars($email),
+            $_SESSION['presets'] = array('login_email' => htmlspecialchars($email),
                                          'password' => htmlspecialchars($password));
             header('Location: ' . $_SERVER['HTTP_REFERER']);
         }
