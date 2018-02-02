@@ -21,7 +21,7 @@ if(strlen($first_name) <= 0 || strlen($first_name) >= 60) {
 if(strlen($last_name) <= 0 || strlen($last_name) >= 60) {
     $errors['last_name_error'] = "Last name must be less than 60 characters!";
 }
-if($num_dependents < 0 || $num_dependents >= 10) {
+if($num_dependents < 0 || $num_dependents >= 10 || empty($num_dependents)) {
     $errors['num_dependents_error'] = "You must enter a number from 0-10!";
 } 
 // If no errors, go to the next page of the form
