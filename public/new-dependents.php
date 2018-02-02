@@ -18,7 +18,7 @@
 
     <div class="header">
         <a href="index.php"><img class="logo" src="images/paylocity_logo.png" alt="Paylocity Coding Challenge Logo" title="Paylocity Home" /></a>
-       <ul class="navlinks">
+        <ul class="navlinks">
             <li><a href="index.php">Home</a></li>
             <li><a href="employees.php">Employees</a></li>
             <li><a href="calculate.php">Calculate</a></li>
@@ -29,37 +29,50 @@
     <body>
         <div class="main">
             <div class="container">
-                <h1 class="orange-title"><?= $_SESSION['employee_first_name'] ?> <?= $_SESSION['employee_last_name'] ?> - Add Dependent(s)</h1>
+                <h1 class="orange-title">
+                    <?= $_SESSION['employee_first_name'] ?>
+                        <?= $_SESSION['employee_last_name'] ?> - Add Dependent(s)</h1>
 
                 <!-- Sign In Form -->
                 <div class="formContainer">
-                    <form class="form" action="new-employee-handler.php" method="POST">
+                    <form class="form" action="new-dependents-handler.php" method="POST">
 
                         <!-- Create X times -->
                         <?php
-                            for($i = 0; $i <$_SESSION['employee_num_dependents']; $i++) {
+                            for($i = 1; $i <=$_SESSION['employee_num_dependents']; $i++) {
+                                $session_first_name = 'dependent_first_name_' . $i;
+                                $session_last_name = 'dependent_last_name_' . $i;
                         ?>
-                        <h3 class="dependent-number">Dependent <?=$i+1?></h3>
-                        <!-- First Last -->
-                        <span>First name:</span>
-                        <br />
-                        <input type="text" name="dependent_first_name<?=$i?>">
-                        <br />
+                            <h3 class="dependent-number">Dependent
+                                <?=$i?>
+                            </h3>
                         
-                        <!-- Last Name -->
-                        <span>Last name:</span>
-                        <br />
-                        <input type="text" name="dependent_last_name<?=$i?>" >
-                        <br />
-                        
-                        <?php
+                            <!-- First Last -->
+                            <span>First name:</span>
+                            <?php if(isset($_SESSION['errors'][$session_first_name])) { ?>
+                            <span class="error-message"><?= $_SESSION['errors'][$session_first_name] ?></span>
+                            <?php } ?>
+                            <br />
+                            <input type="text" name="dependent_first_name_<?=$i?>" value="<?= $_SESSION['presets'][$session_first_name] ?>">
+                            <br />
+
+                            <!-- Last Name -->
+                            <span>Last name:</span>
+                            <?php if(isset($_SESSION['errors'][$session_last_name])) { ?>
+                            <span class="error-message"><?= $_SESSION['errors'][$session_last_name] ?></span>
+                            <?php } ?>
+                            <br />
+                            <input type="text" name="dependent_last_name_<?=$i?>" value="<?= $_SESSION['presets'][$session_last_name] ?>">
+                            <br />
+
+                            <?php
                             }
                         ?>
-                        
-                        <!-- Submit -->
-                        <div class="button-center">
-                            <input class="button-center" type="submit" value="Finish">
-                        </div>
+
+                                <!-- Submit -->
+                                <div class="button-center">
+                                    <input class="button-center" type="submit" value="Finish">
+                                </div>
                     </form>
                 </div>
             </div>
