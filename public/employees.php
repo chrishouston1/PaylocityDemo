@@ -15,6 +15,11 @@
     <head>
         <meta charset="UTF-8">
         <link href="css/style.css" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+        <script src="js/load-employees.js" type="text/javascript"></script>
+
         <title>Paylocity Demo - Employees</title>
     </head>
 
@@ -32,7 +37,12 @@
     <body>
         <div class="main">
             <div class="container">
-
+                <h1 class="orange-title">Employees</h1>
+                <div class="employees-container">
+                </div>
+                <div id="new-employee">
+                    <img src="images/new_employee.png" alt="Add Employee" title="Add Employee" /><p id="new-employee-text"><a href="new-employee.php">Add Employee</a></p>
+                </div>
             </div>
         </div>
     </body>

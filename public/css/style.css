@@ -157,6 +157,55 @@ body {
     cursor: pointer;
 }
 
+/* Employees Table */
+#employees-table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 10% 5% 5% 5%;
+    padding-top: 4em;
+    font-family: "Helvetica";
+    box-shadow: 0.1em 0.1em 0.425em gray;
+
+}
+
+#employees-table td, #employees-table th {
+    border: 0.063em solid #ddd;
+    padding: 1em;
+}
+
+#employees-table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#employees-table tr:hover {
+    background-color: #ddd;
+}
+
+#employees-table th {
+    padding: 1em;
+    text-align: left;
+    background-color: #fcaa1e;
+    font-size: 1em;
+}
+#new-employee {
+    text-align: center;
+}
+
+#new-employee-text, #new-employee-text :link , #new-employee-text :visited {
+    text-align: center;
+    font-size: 1.2em;
+    padding-top: 0.5em;
+    color: #fcaa1e;
+    font-family: "Helvetica";
+    text-decoration: none;
+    font-weight: 200;
+    margin-bottom: 1em;
+}
+
+#new-employee-text :hover {
+    color: gray;
+    cursor: pointer;
+}
 
 /* Extra */
 .button-center {

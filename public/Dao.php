@@ -90,7 +90,7 @@ class Dao
         return array('employee_id' => $results['id']);
     }
     
-        /* Adds new dependent */
+    /* Adds new dependent */
     public function addDependent($first_name, $last_name, $employee){
         $conn = $this->getConnection();
         $stmt = $conn->prepare("INSERT INTO dependent VALUES ('', :first_name, :last_name, :employee)");
@@ -100,4 +100,15 @@ class Dao
         $stmt->execute(); 
     }
     
+    
+    /* Returns all the employees the company has */
+    public function getEmployees($company){
+        $conn = $this->getConnection();
+        $query = "SELECT * FROM employee WHERE company = :company";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':company', $company);
+        $stmt->execute();
+        $result= $stmt->fetchAll();
+        return $result;   
+    }
 }
