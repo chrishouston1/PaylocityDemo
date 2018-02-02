@@ -62,7 +62,7 @@
 
                         <!-- Submit -->
                         <div class="button-center">
-                            <input class="button-center" type="submit" value="Next">
+                            <input class="button-center" type="submit" value="Add Employee">
                         </div>
                     </form>
                 </div>

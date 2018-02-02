@@ -57,7 +57,7 @@ body {
 
 .container {
     width: 50%;
-    min-width: 18.75em;
+    min-width: 25em;
     min-height: 35em;
     height: auto;
     margin-left: 25%;
@@ -170,6 +170,13 @@ body {
     color: red;
     padding-left: .5em;
 }
+
+h3.dependent-number{
+    padding: 1em 0em;
+    color: #fcaa1e;
+    font-weight: 300;
+}
+
 
 
 /* Footer */

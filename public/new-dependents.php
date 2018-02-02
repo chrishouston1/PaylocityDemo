@@ -29,40 +29,36 @@
     <body>
         <div class="main">
             <div class="container">
-                <h1 class="orange-title"><?= $_SESSION['company_name'] ?> - New Employee</h1>
+                <h1 class="orange-title"><?= $_SESSION['employee_first_name'] ?> <?= $_SESSION['employee_last_name'] ?> - Add Dependent(s)</h1>
 
                 <!-- Sign In Form -->
                 <div class="formContainer">
                     <form class="form" action="new-employee-handler.php" method="POST">
 
+                        <!-- Create X times -->
+                        <?php
+                            for($i = 0; $i <$_SESSION['employee_num_dependents']; $i++) {
+                        ?>
+                        <h3 class="dependent-number">Dependent <?=$i+1?></h3>
                         <!-- First Last -->
                         <span>First name:</span>
-                        <?php if(isset($_SESSION['errors']['first_name_error'])) { ?>
-                        <span class="error-message"><?= $_SESSION['errors']['first_name_error'] ?></span>
-                        <?php } ?>
                         <br />
-                        <input type="text" name="employee_first_name" value="<?= $_SESSION['presets']['first_name'] ?>">
+                        <input type="text" name="dependent_first_name<?=$i?>">
                         <br />
                         
                         <!-- Last Name -->
                         <span>Last name:</span>
-                        <?php if(isset($_SESSION['errors']['last_name_error'])) { ?>
-                        <span class="error-message"><?= $_SESSION['errors']['last_name_error'] ?></span>
-                        <?php } ?>
                         <br />
-                        <input type="text" name="employee_last_name" value="<?= $_SESSION['presets']['last_name'] ?>">
+                        <input type="text" name="dependent_last_name<?=$i?>" >
                         <br />
                         
-                        <!-- Number of Dependents -->
-                        <span>Number of dependents:</span><?php if(isset($_SESSION['errors']['num_dependents_error'])) { ?>
-                        <span class="error-message"><?= $_SESSION['errors']['num_dependents_error'] ?></span>
-                        <?php } ?>
-                        <br />
-                        <input type="number" name="employee_number_dependents" value="<?= $_SESSION['presets']['num_dependents'] ?>"> <br />
-
+                        <?php
+                            }
+                        ?>
+                        
                         <!-- Submit -->
                         <div class="button-center">
-                            <input class="button-center" type="submit" value="Next">
+                            <input class="button-center" type="submit" value="Finish">
                         </div>
                     </form>
                 </div>
