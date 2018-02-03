@@ -112,4 +112,26 @@ class Dao
         $result= $stmt->fetchAll();
         return $result;   
     }
+    
+    /* Returns the employee information */
+    public function getEmployee($id){
+        $conn = $this->getConnection();
+        $stmt = $conn->prepare("SELECT * FROM employee WHERE id = :id");
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $results = $stmt->fetch();
+        return array('employee_id' => $results['id'], 'first_name' => $results['first_name'], 'last_name' => $results['last_name'], 'number_dependents' => $results['number_dependents']);
+    }
+    
+    /* Returns all the dependents the employee has */
+    public function getDependents($employee_id){
+        $conn = $this->getConnection();
+        $query = "SELECT first_name, last_name FROM dependent WHERE employee = :employee_id";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':employee_id', $employee_id);
+        $stmt->execute();
+        $result= $stmt->fetchAll();
+        return $result;   
+    }
+    
 }

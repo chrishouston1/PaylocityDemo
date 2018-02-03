@@ -51,7 +51,7 @@
                 <li>All employees are paid $2000 per paycheck before deductions.</li>
                 <li>There are 26 paychecks in a year.</li>
             </ul>
-            <p>To get started, sign into your company account or create one. From there you will be able to add new employees or view existing ones. You can calculate the benefits package on the "Calculate" page.
+            <p>To get started, sign into your company account or create one. From there you will be able to add new employees or view existing ones. You can calculate the benefits package on the "Calculate" button.
             </p>
             <h3>Get started!</h3>
         </div>

@@ -83,7 +83,7 @@ body {
     color: #fcaa1e;
     border-bottom: 0.03em solid lightgray;
     padding-bottom: 0.25em;
-    margin: 0em 4em;
+    margin: 0.2em 4em;
 }
 
 .coding-challenge-content {
@@ -213,12 +213,24 @@ body {
     border-radius: 0.5em;
     font-weight: 600;
     outline: none;
+    -webkit-appearance: none;
+
 }
 
 .employees-form input[type=button]:hover {
     background-color: lightgray;
     cursor: pointer;
 }
+
+/* Calculation Page */
+.dependent-list {
+    padding-left: 4em;
+    padding-bottom: 1em;
+    font-family: "Helvetica";
+}
+
+
+
 
 /* Extra */
 .button-center {
@@ -230,12 +242,58 @@ body {
 .error-message {
     color: red;
     padding-left: .5em;
+    font-size: .9em;
+    font-family: "Helvetica";
+
+}
+
+.error-message-center {
+    text-align: center;
+    color: red;
+    padding-left: .5em;
+    font-size: .9em;
+    font-family: "Helvetica";
+}
+
+.spacer {
+    height: 4em;
 }
 
 h3.dependent-number{
     padding: 1em 0em;
     color: #fcaa1e;
     font-weight: 300;
+}
+
+#no-employee {
+    padding-top: 10em;
+    text-align: center;
+    font-family: "Helvetica";
+
+}
+
+.medium-black-title {
+    padding: 1em 0em 0.1em 0em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    color: black;
+    font-family: "Helvetica";
+    font-weight: 400;
+    border-bottom: 0.03em solid lightgray;
+}
+
+.medium-red-title {
+    padding: 1em 0em 0.1em 0em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    color: red;
+    font-family: "Helvetica";
+    font-weight: 400;
+    border-bottom: 0.03em solid lightgray;
 }
 
 
