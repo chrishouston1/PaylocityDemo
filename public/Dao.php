@@ -69,12 +69,13 @@ class Dao
     
     
     /* Adds new employee to the company */
-    public function addEmployee($first_name, $last_name, $company_id){
+    public function addEmployee($first_name, $last_name, $company_id, $number_dependents){
         $conn = $this->getConnection();
-        $stmt = $conn->prepare("INSERT INTO employee VALUES ('', :first_name, :last_name, :company_id)");
+        $stmt = $conn->prepare("INSERT INTO employee VALUES ('', :first_name, :last_name, :company_id, :number_dependents)");
         $stmt->bindParam(':first_name', $first_name);
         $stmt->bindParam(':last_name', $last_name);
         $stmt->bindParam(':company_id', $company_id);
+        $stmt->bindParam(':number_dependents', $number_dependents);
         $stmt->execute();
     }
     

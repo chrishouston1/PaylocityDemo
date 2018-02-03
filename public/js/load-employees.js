@@ -10,7 +10,7 @@ $(document).ready(function() {
                     var jsonLength = Object.keys(result).length;  
                     var tableString = "<table id=\"employees-table\"><tr><th>First name </th> <th>Last name</th><th>Number of dependents</th></tr>";
                     for(i=jsonLength-1; i >=0  ; i--){
-                        tableString += "<tr><td>" + result[i]['first_name'] + "</td><td>" + result[i]['last_name'] + "</td><td>Coming soon..</td></tr>";
+                        tableString += "<tr><td>" + result[i]['first_name'] + "</td><td>" + result[i]['last_name'] + "</td><td> " + result[i]['number_dependents'] + "</td></tr>";
                     }
                     tableString += "</table>";
                     $(".employees-container").append(tableString);
