@@ -96,7 +96,7 @@
                 <ul class="dependent-list">
                     <li>Dependent costs: $<?=$_SESSION['employee']['dependent_cost']?>/year.</li>
                     <li>Total deductions: $<?=$_SESSION['employee']['dependent_cost'] + 1000?>/year.</li>
-                    <li>Total deductions per paycheck: $<?= round(($_SESSION['employee']['dependent_cost'] + 1000)/26,2,PHP_ROUND_HALF_UP)?> (rounded up).</li>
+                    <li>Total deductions per paycheck: $<?= round(($_SESSION['employee']['dependent_cost'] + 1000)/26,2,PHP_ROUND_HALF_UP)?>.</li>
                     <li>Paycheck after deductions: $<?= 2000 - round(($_SESSION['employee']['dependent_cost'] + 1000)/26,2,PHP_ROUND_HALF_UP)?>.</li>
                 </ul>
                 
