@@ -5,6 +5,7 @@
 
     // Unset the presets 
     unset($_SESSION['presets']);
+    unset($_SESSION['errors']);
 ?>
 
 
@@ -29,7 +30,6 @@
         <ul class="navlinks">
             <li><a href="index.php">Home</a></li>
             <li><a href="employees.php">Employees</a></li>
-            <li><a href="calculate.php">Calculate</a></li>
             <li><a href="logout.php">Log Out</a></li>
         </ul>
     </div>

@@ -24,7 +24,6 @@
         <li><a href="index.php">Home</a></li>
         <?php if(isset($_SESSION['logged_in'])) { ?>
             <li><a href="employees.php">Employees</a></li>
-            <li><a href="calculate.php">Calculate</a></li>
             <li><a href="logout.php">Log Out</a></li>
         <?php } else { ?>
             <li><a href="login.php">Sign In</a></li>

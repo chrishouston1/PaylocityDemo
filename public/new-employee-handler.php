@@ -46,7 +46,6 @@ if(empty($errors)){
                                 'last_name' => htmlspecialchars($last_name),
                                 'num_dependents' => htmlspecialchars($num_dependents));
     header('Location: ' . $_SERVER['HTTP_REFERER']);
-    
 }
 
 ?>

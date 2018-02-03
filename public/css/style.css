@@ -177,9 +177,6 @@ body {
     background-color: #f2f2f2;
 }
 
-#employees-table tr:hover {
-    background-color: #ddd;
-}
 
 #employees-table th {
     padding: 1em;
@@ -207,6 +204,22 @@ body {
     cursor: pointer;
 }
 
+
+.employees-form input[type=button], .employees-form input[type=button] :active {
+    margin-left: 10%;
+    background-color: #fcaa1e;
+    width: 80%;
+    height: 2.5em;
+    border-radius: 0.5em;
+    font-weight: 600;
+    outline: none;
+}
+
+.employees-form input[type=button]:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
 /* Extra */
 .button-center {
     width: 50%;
@@ -224,7 +237,6 @@ h3.dependent-number{
     color: #fcaa1e;
     font-weight: 300;
 }
-
 
 
 /* Footer */

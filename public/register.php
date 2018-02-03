@@ -62,7 +62,7 @@
                         <input type="password" name="password"> <br />
 
                         <!-- Password Repeat -->
-                        <span>Repeat password:</span>
+                        <span>Confirm password:</span>
                         <?php if(isset($_SESSION['errors']['password_repeat'])) { ?>
                         <span class="error-message"><?= $_SESSION['errors']['password_repeat'] ?></span>
                         <?php } ?>
