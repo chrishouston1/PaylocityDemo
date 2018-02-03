@@ -36,7 +36,7 @@
                 
                 <!-- Employee Name -->
                 <h1 class="orange-title"><?=$_SESSION['employee']['first_name']?> <?=$_SESSION['employee']['last_name']?></h1>
-                <?php if($_SESSION['employee']['starts_with_a'] === true) { ?>  <p class="error-message-center">(10% discount.)</p><?php } ?>
+                <?php if($_SESSION['employee']['starts_with_a'] === true) { ?>  <p class="error-message-center">(10% discount)</p><?php } ?>
                 <div class="spacer"></div>
                 
                 <!-- Dependents Information -->
@@ -45,14 +45,14 @@
                 if ($_SESSION['employee']['number_dependents'] > 0) { ?>
                 <?php } else { ?>
                 <ul class="dependent-list">
-                    <li>No dependents</li>
+                    <li>No dependents.</li>
                 </ul>
                 <?php } ?>
                 <ul class="dependent-list">
                     <?php for($i = 1; $i <= $_SESSION['employee']['number_dependents']; $i++) {
                         $dependent = 'dependent_' . $i ?>
                         <li><?=$_SESSION[$dependent]['first_name']?> <?=$_SESSION[$dependent]['last_name']?> <?php if($_SESSION[$dependent]['first_name'][0] == 'A' || $_SESSION[$dependent]['first_name'][0] == 'a') { ?>
-                            <span class="error-message">(10% discount.)</span>
+                            <span class="error-message">(10% discount)</span>
                             <?php } ?>
                     </li>
                     <?php } ?>
@@ -96,7 +96,7 @@
                 <ul class="dependent-list">
                     <li>Dependent costs: $<?=$_SESSION['employee']['dependent_cost']?>/year.</li>
                     <li>Total deductions: $<?=$_SESSION['employee']['dependent_cost'] + 1000?>/year.</li>
-                    <li>Total deduction per paycheck: $<?= round(($_SESSION['employee']['dependent_cost'] + 1000)/26,2,PHP_ROUND_HALF_UP)?> (rounded up).</li>
+                    <li>Total deductions per paycheck: $<?= round(($_SESSION['employee']['dependent_cost'] + 1000)/26,2,PHP_ROUND_HALF_UP)?> (rounded up).</li>
                 </ul>
                 
                 <div class="spacer"></div>

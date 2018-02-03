@@ -37,7 +37,7 @@
     <body>
         <div class="main">
             <div class="container">
-                <h1 class="orange-title">Employees</h1>
+                <h1 class="orange-title"><?=$_SESSION['company_name']?> Employees</h1>
                 <div class="employees-container">
                 </div>
                 <div id="new-employee">
