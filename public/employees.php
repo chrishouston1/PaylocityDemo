@@ -41,7 +41,7 @@
                 <div class="employees-container">
                 </div>
                 <div id="new-employee">
-                    <img src="images/new_employee.png" alt="Add Employee" title="Add Employee" /><p id="new-employee-text"><a href="new-employee.php">Add Employee</a></p>
+                    <a href="new-employee.php"><img src="images/new_employee.png" alt="Add Employee" title="Add Employee" /></a><p id="new-employee-text"><a href="new-employee.php">Add Employee</a></p>
                 </div>
             </div>
         </div>

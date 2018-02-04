@@ -22,7 +22,6 @@
         <ul class="navlinks">
             <li><a href="index.php">Home</a></li>
             <li><a href="employees.php">Employees</a></li>
-            <li><a href="calculate.php">Calculate</a></li>
             <li><a href="logout.php">Log Out</a></li>
         </ul>
     </div>
@@ -61,7 +60,7 @@
                 <!-- Salary -->
                 <h3 class="medium-black-title">Salary</h3>
                 <ul class="dependent-list">
-                    <li>Yearly salary: $52,000.</li>
+                    <li>Annual salary: $52,000.</li>
                     <li>Paycheck (26 a year): $2000 before deductions.</li>
                 </ul>
                 
