@@ -3,7 +3,7 @@
         session_start();
     }
 
-    // Unset the presets 
+    // Unset the presets so it does not show old presets if user adds new employee/dependent
     unset($_SESSION['presets']);
     unset($_SESSION['errors']);
 ?>
@@ -38,6 +38,8 @@
         <div class="main">
             <div class="container">
                 <h1 class="orange-title"><?=$_SESSION['company_name']?> Employees</h1>
+                
+                <!-- Table of employees loads from AJAX load-employees.js -->
                 <div class="employees-container">
                 </div>
                 <div id="new-employee">
@@ -47,9 +49,9 @@
         </div>
     </body>
 
-    <div class="footer">
+    <footer>
         <p>Chris Houston</p>
-    </div>
+    </footer>
 
 
     </html>

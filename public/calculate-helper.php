@@ -7,7 +7,7 @@ $dao = new DAO();
 
 $employee_id = $_GET['employee_id'];
 
-// Get employee name
+// Get employee information
 $employee = $dao->getEmployee($employee_id);
 $_SESSION['employee']['first_name'] = $employee['first_name'];
 $_SESSION['employee']['last_name'] = $employee['last_name'];

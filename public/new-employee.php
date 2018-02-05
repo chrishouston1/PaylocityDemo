@@ -21,7 +21,6 @@
        <ul class="navlinks">
             <li><a href="index.php">Home</a></li>
             <li><a href="employees.php">Employees</a></li>
-            <li><a href="calculate.php">Calculate</a></li>
             <li><a href="logout.php">Log Out</a></li>
         </ul>
     </div>
@@ -69,9 +68,10 @@
             </div>
         </div>
     </body>
-    <div class="footer">
+        
+    <footer>
         <p>Chris Houston</p>
-    </div>
+    </footer>
 
 
     </html>

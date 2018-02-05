@@ -24,6 +24,7 @@ if(strlen($last_name) <= 0 || strlen($last_name) >= 60) {
 if(($num_dependents < 0 || $num_dependents >= 10) || $num_dependents == NULL) {
     $errors['num_dependents_error'] = "You must enter a number from 0-10!";
 } 
+
 // If no errors, go to the next page of the form
 if(empty($errors)){
     

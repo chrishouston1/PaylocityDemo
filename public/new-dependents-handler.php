@@ -4,6 +4,7 @@ require("Dao.php");
 
 // Create database handle
 $dao = new DAO();
+
 $errors = array();
 
 // Set all variables from the form
@@ -26,13 +27,11 @@ for($i = 1; $i <= $num_dependents; $i++) {
     
     // Add to presets
     $_SESSION['presets'][$first_name] = $_POST[$first_name];
-    $_SESSION['presets'][$last_name] = $_POST[$last_name];
-
-    
+    $_SESSION['presets'][$last_name] = $_POST[$last_name]; 
 }
 
 
-// Add dependents to database
+// Add dependents to database if no errors
 if(empty($errors)) {
     
     for($i = 1; $i <= $num_dependents; $i++) {

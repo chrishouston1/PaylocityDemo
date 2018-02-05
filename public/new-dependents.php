@@ -21,7 +21,6 @@
         <ul class="navlinks">
             <li><a href="index.php">Home</a></li>
             <li><a href="employees.php">Employees</a></li>
-            <li><a href="calculate.php">Calculate</a></li>
             <li><a href="logout.php">Log Out</a></li>
         </ul>
     </div>
@@ -37,7 +36,7 @@
                 <div class="formContainer">
                     <form class="form" action="new-dependents-handler.php" method="POST">
 
-                        <!-- Create X times -->
+                        <!-- Create X times for dependent info -->
                         <?php
                             for($i = 1; $i <=$_SESSION['employee_num_dependents']; $i++) {
                                 $session_first_name = 'dependent_first_name_' . $i;
@@ -46,7 +45,7 @@
                             <h3 class="dependent-number">Dependent
                                 <?=$i?>
                             </h3>
-                        
+
                             <!-- First Last -->
                             <span>First name:</span>
                             <?php if(isset($_SESSION['errors'][$session_first_name])) { ?>
