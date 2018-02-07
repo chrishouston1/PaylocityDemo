@@ -77,9 +77,9 @@
             </div>
         </div>
     </body>
-    <div class="footer">
+    <footer>
         <p>Chris Houston</p>
-    </div>
+    </footer>
 
 
     </html>

@@ -17,7 +17,7 @@ $errors = array();
 // Check the lengths of all variables
 if(strlen($first_name) <= 0 || strlen($first_name) >= 60) {
     $errors['first_name_error'] = "First name must be less than 60 characters!";
-} 
+}
 if(strlen($last_name) <= 0 || strlen($last_name) >= 60) {
     $errors['last_name_error'] = "Last name must be less than 60 characters!";
 }
