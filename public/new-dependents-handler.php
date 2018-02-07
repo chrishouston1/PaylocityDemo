@@ -25,6 +25,13 @@ for($i = 1; $i <= $num_dependents; $i++) {
         $errors[$error_last_name] = "Cannot be left blank!";
     }
     
+    if(!ctype_alpha($first_name)) {
+        $errors[$error_first_name] = "Cannot be left blank and must contain only letters!";
+    }
+    if(!ctype_alpha($last_name)) {
+        $errors[$error_last_name] = "Cannot be left blank and must contain only letters!";
+    } 
+    
     // Add to presets
     $_SESSION['presets'][$first_name] = $_POST[$first_name];
     $_SESSION['presets'][$last_name] = $_POST[$last_name]; 

@@ -18,9 +18,15 @@ $errors = array();
 if(strlen($first_name) <= 0 || strlen($first_name) >= 60) {
     $errors['first_name_error'] = "First name must be less than 60 characters!";
 }
+if(!ctype_alpha($first_name)) {
+    $errors['first_name_error'] = "First name must only contain letters!";
+} 
 if(strlen($last_name) <= 0 || strlen($last_name) >= 60) {
     $errors['last_name_error'] = "Last name must be less than 60 characters!";
 }
+if(!ctype_alpha($last_name)) {
+    $errors['last_name_error'] = "Last name must only contain letters!";
+} 
 if(($num_dependents < 0 || $num_dependents >= 10) || $num_dependents == NULL) {
     $errors['num_dependents_error'] = "You must enter a number from 0-10!";
 } 
