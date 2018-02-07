@@ -28,7 +28,7 @@
     <body>
         <div class="main">
             <div class="container">
-                <h1 class="orange-title"><?= $_SESSION['company_name'] ?> - New Employee</h1>
+                <h1 class="orange-title">New Employee</h1>
 
                 <!-- Sign In Form -->
                 <div class="formContainer">
