@@ -26,9 +26,11 @@ for($i = 1; $i <= $num_dependents; $i++) {
     }
     
     if(!ctype_alpha($first_name)) {
+        $error_last_name = 'dependent_first_name_' . $i;
         $errors[$error_first_name] = "Cannot be left blank and must contain only letters!";
     }
     if(!ctype_alpha($last_name)) {
+        $error_last_name = 'dependent_last_name_' . $i;
         $errors[$error_last_name] = "Cannot be left blank and must contain only letters!";
     } 
     
